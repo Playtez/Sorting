@@ -22,12 +22,10 @@ def bubble_sort(arr):
     swap = True
     while swap == True:
         swap = False
-        smallest = 0
-        for i in range(smallest + 1, len(arr)):
-            if arr[i] < arr[smallest]:
-                arr[i], arr[smallest] = arr[smallest], arr[i]
+        for i in range(1, len(arr)):
+            if arr[i] < arr[i-1]:
+                arr[i], arr[i-1] = arr[i-1], arr[i]
                 swap = True
-            smallest += 1
     return arr
 
 
